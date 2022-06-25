@@ -2,8 +2,9 @@ FROM openjdk:11
 
 WORKDIR /opt/app
 
-ARG JAR_FILE=target/poc-microservice-stock-0.0.1-SNAPSHOT.jar
+ENV SPRING_PROFILES_ACTIVE=docker
 
-COPY ${JAR_FILE} app.jar
+ADD ./target/*.jar app.jar
 
+EXPOSE 8082
 ENTRYPOINT ["java","-jar","app.jar"]
