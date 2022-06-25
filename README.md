@@ -22,4 +22,6 @@ Run image
 docker run --rm --name poc-microservice-stock -p 8082:8082 --network microservice poc-microservice-stock:0.0.1-SNAPSHOT
 ```
 
-![Microservices](captures/microservices.png "Microservices")
+![Microservices](captures/microservices.png)
+
+![Network](captures/network.png)
